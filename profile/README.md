@@ -184,6 +184,7 @@ for idx,post_url_val in enumerate(post_url_list):
   print()
 ```phthon
 </details>
+	
 
 ## 아쉬운 점 
 1. 상세페이지에서 뒤로가기를 하면 메인 첫 페이지로 돌아감
