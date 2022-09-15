@@ -20,7 +20,6 @@ FE 서버 배포: http://hyerimawsbucket.s3-website.ap-northeast-2.amazonaws.com
 ## 기술스택
 <img src="https://img.shields.io/badge/Amazon Web Service-232F3E?style=flat-square&logo=Amazon%20AWS&logoColor=white"/>
 <img src="https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=white"/>
-<img src="https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=white"/>
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/>
 <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white"/>
 <img src="https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white"/>
@@ -28,6 +27,7 @@ FE 서버 배포: http://hyerimawsbucket.s3-website.ap-northeast-2.amazonaws.com
 <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/>
 <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/>
 <img src="https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white"/>
+<img src="https://img.shields.io/badge/Visual Studio Code-007ACC.svg?style=for-the-badge&logo=Visual Studio Code&logoColor=white"/>
 
     
 ## 📃api명세서
