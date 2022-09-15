@@ -4,17 +4,16 @@
 ##### 프로젝트 기간: 22/9/9-15
 <img width="1757" alt="스크린샷 2022-09-15 오후 1 13 38" src="https://user-images.githubusercontent.com/104494969/190312656-94c2cfd5-2dcb-470f-8b94-2a12e3f3ed42.png">
 
-FE 서버 배포: http://hyerimawsbucket.s3-website.ap-northeast-2.amazonaws.com/
+#####  서버 배포: http://hyerimawsbucket.s3-website.ap-northeast-2.amazonaws.com/
 ##### FE Github : origin[https://github.com/jamie7dev/W7_One_more_bag.git]
 ##### FE Github organization - origin2[https://github.com/codingshoppingmall8/FE]
 ##### BE Github : [https://github.com/codingshoppingmall8/BE]
 
-## 팀원
-[FE] 이혜림, 윤채원   
-[BE] 이선홍, 신동하, 김하영
+## 👨‍👦‍👦Team Members
+**[FE] Hye-lim-Lee, Chae-woun-Youn** <br>
+**[BE] Sun-Hong-Lee, Dong-Ha-Shin, Ha-Young-Kim**
 
-## 기술스택
-
+## ⚒Tech Stack
 <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=Spring Boot&logoColor=white"/>
 <img src="https://img.shields.io/badge/Spring Security-6DB33F?style=for-the-badge&logo=Spring Security&logoColor=white"/>
 <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
