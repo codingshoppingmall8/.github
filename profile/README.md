@@ -13,6 +13,34 @@ FE 서버 배포: http://hyerimawsbucket.s3-website.ap-northeast-2.amazonaws.com
 [FE] 이혜림, 윤채원   
 [BE] 이선홍, 신동하, 김하영
 
+## 💾ERD
+![image](https://user-images.githubusercontent.com/67679972/190326599-51dfb9a8-8e60-45f8-85ea-711b7c2f26cc.png)
+<br>
+    
+## 📃api명세서
+링크 : https://nonchalant-sturgeon-21a.notion.site/8-d8cd94d7525843618ebc766da876d5d0
+|기능|메소드|URL|
+|------|---|---|
+|이메일중복체크|GET|api/member/signup|
+|회원가입|POST|api/member/signup|
+|로그인|POST|api/member/login|
+|카카오 로그인|GET|api/member/kakao|
+|메인페이지 가져오기|GET|api/post?page=|
+|메인페이지 정렬|GET|api/sort_post?page= &sort_method=|
+|카테고리별로 가져오기|GET|api/post_category?page=&cate_no=|
+|카테고리별로 정렬|GET|api/post_category?page=&cate_n&sort_method=|
+|상세페이지 가져오기|GET|api/post/{id}|
+|마이페이지 가져오기|GET|api/member/mypage|
+|마이페이지 수정|POST|api/member/mypage|
+|장바구니 담기|POST|api/member/cart/{id}|
+|장바구니 조회|GET|api/member/cart|
+|장바구니 삭제|DELETE|api/member/cart|
+|장바구니 전체삭제|DELETE|api/member/cart/deleteAll|
+|게시글 등록|GET|api/member/cart|
+|게시글 삭제|DELETE|api/member/cart{id}|
+<br>
+
+
 ## 기능 구현 List
 
 1. 회원가입
@@ -41,33 +69,6 @@ FE 서버 배포: http://hyerimawsbucket.s3-website.ap-northeast-2.amazonaws.com
     - 장바구니에 상품 추가, 개별 삭제
     - checkbox 전체 선택, 해제, 선택 삭제
     - 장바구니 비우기 (목록 전체 삭제)
-
-## 💾ERD
-![image](https://user-images.githubusercontent.com/67679972/190326599-51dfb9a8-8e60-45f8-85ea-711b7c2f26cc.png)
-<br>
-    
-## 📃api명세서
-링크 : https://nonchalant-sturgeon-21a.notion.site/8-d8cd94d7525843618ebc766da876d5d0
-|기능|메소드|URL|
-|------|---|---|
-|이메일중복체크|GET|api/member/signup|
-|회원가입|POST|api/member/signup|
-|로그인|POST|api/member/login|
-|카카오 로그인|GET|api/member/kakao|
-|메인페이지 가져오기|GET|api/post?page=|
-|메인페이지 정렬|GET|api/sort_post?page= &sort_method=|
-|카테고리별로 가져오기|GET|api/post_category?page=&cate_no=|
-|카테고리별로 정렬|GET|api/post_category?page=&cate_n&sort_method=|
-|상세페이지 가져오기|GET|api/post/{id}|
-|마이페이지 가져오기|GET|api/member/mypage|
-|마이페이지 수정|POST|api/member/mypage|
-|장바구니 담기|POST|api/member/cart/{id}|
-|장바구니 조회|GET|api/member/cart|
-|장바구니 삭제|DELETE|api/member/cart|
-|장바구니 전체삭제|DELETE|api/member/cart/deleteAll|
-|게시글 등록|GET|api/member/cart|
-|게시글 삭제|DELETE|api/member/cart{id}|
-<br>
 
 
 -----------------
@@ -106,6 +107,12 @@ FE 서버 배포: http://hyerimawsbucket.s3-website.ap-northeast-2.amazonaws.com
      따라서 수작업으로 하실 예상소유시간 6시간 걸리는 작업을 30분으로 축소항 수 있음
     해결) 
 
+## 아쉬운 점 
+1. 상세페이지에서 뒤로가기를 하면 메인 첫 페이지로 돌아감
+2. 관리자 페이지
+    - 상품 등록
+    - 회원관리
+    
 <details>
     <summary>
 	 <b>크롤링 동작 코드 python</b>
@@ -184,14 +191,8 @@ for idx,post_url_val in enumerate(post_url_list):
   print()
 ```phthon
 </details>
-	
 
-## 아쉬운 점 
-1. 상세페이지에서 뒤로가기를 하면 메인 첫 페이지로 돌아감
-2. 관리자 페이지
-    - 상품 등록
-    - 
-    
+
     
     
    
