@@ -10,7 +10,7 @@
 ##### BE Github : [https://github.com/codingshoppingmall8/BE]
 
 ## 👨‍👦‍👦Team Members
-**[FE] Hye-lim-Lee, Chae-woun-Youn** <br>
+**[FE] Hye-rim-Lee, Chae-won-Yoon** <br>
 **[BE] Sun-Hong-Lee, Dong-Ha-Shin, Ha-Young-Kim**
 
 ## ⚒Tech Stack
