@@ -116,7 +116,8 @@ FE 서버 배포: http://hyerimawsbucket.s3-website.ap-northeast-2.amazonaws.com
 <details>
     <summary>
 	 <b>크롤링 동작 코드 python</b>
-    </summary>
+    </summary> 
+	
 ```python
 <br>
 # url로 html 받아오기
@@ -190,14 +191,8 @@ for idx,post_url_val in enumerate(post_url_list):
   print(response)
   print()
 ```
-	
 </details>
 
 
     
-    
    
-
-      
-
-
