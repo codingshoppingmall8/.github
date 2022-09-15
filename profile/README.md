@@ -118,77 +118,77 @@ FE 서버 배포: http://hyerimawsbucket.s3-website.ap-northeast-2.amazonaws.com
 	 <b>크롤링 동작 코드 python</b>
     </summary>
 ```python
-	<br>
-	# url로 html 받아오기
-	url = "https://www.onemorebag.kr/product/list.html?cate_no=676&page=5"
-	scraper = cfscrape.create_scraper()
-	r = scraper.get(url)
-	r.status_code  # 200
+<br>
+# url로 html 받아오기
+url = "https://www.onemorebag.kr/product/list.html?cate_no=676&page=5"
+scraper = cfscrape.create_scraper()
+r = scraper.get(url)
+r.status_code  # 200
 
-	# id 값이 normal-products-container인 ul 태그만 가져오기 
-	soup = BeautifulSoup(r.content.decode('utf-8'), "lxml")
-	cartoonsBox = soup.find('ul', attrs={"id": "normal-products-container"})
+# id 값이 normal-products-container인 ul 태그만 가져오기 
+soup = BeautifulSoup(r.content.decode('utf-8'), "lxml")
+cartoonsBox = soup.find('ul', attrs={"id": "normal-products-container"})
 
-	# a 태그 만 저장 
-	cartoons = cartoonsBox.find_all('a')
-	post_url_list = []
-	post_img_url_list = []
+# a 태그 만 저장 
+cartoons = cartoonsBox.find_all('a')
+post_url_list = []
+post_img_url_list = []
 
-	for idx,val in enumerate(cartoons):
-	  if idx % 2 == 0:
-	    print(val.findChild("img")['src']) # 이미지 주소
-	    post_img_url_list.append(val.findChild("img")['src'])
-	    print(val.get('href')) # 상품 상세페이지 주소
-	    post_url_list.append(val.get('href'))
-	  else: 
-	    print(str(val)[:-11].split('style="font-size:12px;color:#555555;">')[-1] ) # 상품 제목
-	  print()
+for idx,val in enumerate(cartoons):
+  if idx % 2 == 0:
+    print(val.findChild("img")['src']) # 이미지 주소
+    post_img_url_list.append(val.findChild("img")['src'])
+    print(val.get('href')) # 상품 상세페이지 주소
+    post_url_list.append(val.get('href'))
+  else: 
+    print(str(val)[:-11].split('style="font-size:12px;color:#555555;">')[-1] ) # 상품 제목
+  print()
 
-		server = 'http://43.201.34.71:8080/api/member/post'
-	category = 5
-	for idx,post_url_val in enumerate(post_url_list):
-	  post_url = "https://www.onemorebag.kr" + post_url_val
+	server = 'http://43.201.34.71:8080/api/member/post'
+category = 5
+for idx,post_url_val in enumerate(post_url_list):
+  post_url = "https://www.onemorebag.kr" + post_url_val
 
-	  scraper = cfscrape.create_scraper()
-	  r = scraper.get(post_url)
-	  r.status_code  # 200
+  scraper = cfscrape.create_scraper()
+  r = scraper.get(post_url)
+  r.status_code  # 200
 
-	  soup = BeautifulSoup(r.content.decode('utf-8'), "lxml")
-	  cartoonsBox = soup.find('div', attrs={"class": "xans-element- xans-product xans-product-detaildesign"})
-	  cartoons = cartoonsBox.find_all('td')
+  soup = BeautifulSoup(r.content.decode('utf-8'), "lxml")
+  cartoonsBox = soup.find('div', attrs={"class": "xans-element- xans-product xans-product-detaildesign"})
+  cartoons = cartoonsBox.find_all('td')
 
-	# 문자열 추출   가격과 포인트는 문자열 
-	  img_url = "http:" + post_img_url_list[idx]
-	  print("imgUrl : " + img_url)
-	  title_list = []
-	  brand_list = []
-	  desc_list = []
-	  cost_list = []
-	  point_list = []
+# 문자열 추출   가격과 포인트는 문자열 
+  img_url = "http:" + post_img_url_list[idx]
+  print("imgUrl : " + img_url)
+  title_list = []
+  brand_list = []
+  desc_list = []
+  cost_list = []
+  point_list = []
 
-	  for idx,val in enumerate(cartoons):
-	    s = val.getText()
-	    if idx == 0:
-	      s = s.split(']')
-	      title = str(s[1])[1:]
-	      brand = str(s[0]).split('[')[-1]
-	    elif idx == 1:
-	      desc = s.replace('\r\n','-')
-	    elif idx == 2:
-	      cost=s[:-2].replace(',','')
-	    elif idx == 3:
-	      point = s.split('원')[0].replace(',','')
-	    elif idx == 4:
-	      continue
-	    #print(str(idx) + " " +s)
-	  print("brand : " + brand)
-	  print("title : " + title)
-	  print("desc : " + desc)
-	  print("cost : " + cost )
-	  print("point : " + point)
-	  response = requests.post(server, json={'imgUrl':img_url,'title': title, 'desc':desc,'cost':int(cost), 'point':int(point),'category':category,'brand':brand})
-	  print(response)
-	  print()
+  for idx,val in enumerate(cartoons):
+    s = val.getText()
+    if idx == 0:
+      s = s.split(']')
+      title = str(s[1])[1:]
+      brand = str(s[0]).split('[')[-1]
+    elif idx == 1:
+      desc = s.replace('\r\n','-')
+    elif idx == 2:
+      cost=s[:-2].replace(',','')
+    elif idx == 3:
+      point = s.split('원')[0].replace(',','')
+    elif idx == 4:
+      continue
+    #print(str(idx) + " " +s)
+  print("brand : " + brand)
+  print("title : " + title)
+  print("desc : " + desc)
+  print("cost : " + cost )
+  print("point : " + point)
+  response = requests.post(server, json={'imgUrl':img_url,'title': title, 'desc':desc,'cost':int(cost), 'point':int(point),'category':category,'brand':brand})
+  print(response)
+  print()
 ```python
 </details>
 
