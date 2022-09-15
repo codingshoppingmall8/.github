@@ -56,39 +56,38 @@
 <br>
 
 
-## 기능 구현 List
+## 📖기능 구현 List
 
-1. 회원가입
-    - Email 중복 검사
-    - Email 유효성 검사
-    - PW 및 PW Confirm 유효성 검사
-    - 휴대전화 유효성 검사
+1. **회원가입**
+    - **Email 중복 검사**
+    - **Email 유효성 검사**
+    - **PW 및 PW Confirm 유효성 검사**
+    - **휴대전화 유효성 검사**
     
-2. 로그인
-    - Email, PW 입력시 공백 유효성 검사
-    - Email, PW 일치 검사
-    - Access Token과 Refresh Token을 Cookie에 저장하고 interceptor 사용
-       모든 페이지에서 로그인 유지
-    - 소셜 로그인 구현(카카오) Token을 localStorage에 저장   
-
-3. 마이페이지
-    - 회원 정보 수정 (이름, 주소, 휴대전화)
+2. **로그인**
+    - **Email, PW 입력시 공백 유효성 검사**
+    - **Email, PW 일치 검사**
+    - **Access Token과 Refresh Token을 Cookie에 저장하고 interceptor 사용
+       모든 페이지에서 로그인 유지**
+    - **소셜 로그인 구현(카카오) Token을 localStorage에 저장**   
+3. **마이페이지**
+    - **회원 정보 수정 (이름, 주소, 휴대전화)**
     
-4. 메인 페이지
-    - 상품 카테고리별 정렬
-    - Pagination
-    - 신상품/상품명/낮은가격/높은가격/조회수 정렬
-    - css(스크롤시 헤더 고정, grid, 반응형 웹페이지)
+4. **메인 페이지**
+   - **상품 카테고리별 정렬**
+    - **Pagination**
+    - **신상품/상품명/낮은가격/높은가격/조회수 정렬**
+    - **css(스크롤시 헤더 고정, grid, 반응형 웹페이지)**
     
-5. 장바구니
-    - 장바구니에 상품 추가, 개별 삭제
-    - checkbox 전체 선택, 해제, 선택 삭제
-    - 장바구니 비우기 (목록 전체 삭제)
+5. **장바구니**
+    - **장바구니에 상품 추가, 개별 삭제**
+    - **checkbox 전체 선택, 해제, 선택 삭제**
+    - **장바구니 비우기 (목록 전체 삭제)**
 
 
 -----------------
 
-## Front) TroubleShooting🧨 
+## Front) 😡TroubleShooting 
 
 - A component is changing a controlled input to be uncontrolled.    
     원인) input 태그의 value 초기값이 undefined였다가 렌더링 후에 값이 들어와 바뀌면서 발생한 에러    
@@ -101,7 +100,7 @@
       예) Axios.delete(`/posts/${id}`, {data:{posts: posts}})    
       
       
-## Back) TroubleShooting🧨  
+## Back) 😡TroubleShooting  
 
 - postman으로 Long 타입 리스트를 주는데 controller에서 그 값을 못 받음    
     원인) postman에서는 json형식으로 list를 제공하는데 일반 List 객체는 이값을 받지 못함. <br>
@@ -203,7 +202,7 @@ for idx,post_url_val in enumerate(post_url_list):
 </details>
 
 
-## 아쉬운 점 
+## 😥아쉬운 점 
 1. 상세페이지에서 뒤로가기를 하면 메인 첫 페이지로 돌아감
 2. 관리자 페이지
     - 상품 등록
