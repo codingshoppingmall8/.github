@@ -8,6 +8,7 @@
 ##### FE Github : origin[https://github.com/jamie7dev/W7_One_more_bag.git]
 ##### FE Github organization - origin2[https://github.com/codingshoppingmall8/FE]
 ##### BE Github : [https://github.com/codingshoppingmall8/BE]
+##### 시연영상 : [https://www.youtube.com/watch?v=cNfL2WA3fxA]
 
 ## 👨‍👦‍👦Team Members
 **[FE] Hye-rim-Lee, Chae-won-Yoon** <br>
